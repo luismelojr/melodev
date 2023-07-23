@@ -43,6 +43,7 @@ module.exports = {
                 trailingComma: 'all',
             },
         ],
+        'no-undef': 'off',
 
     }
 }

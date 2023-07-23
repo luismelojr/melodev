@@ -25,4 +25,8 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('toast', function() {
+    return redirect()->back()->toast('Testando');
+})->name('toast');
+
 require __DIR__.'/auth.php';

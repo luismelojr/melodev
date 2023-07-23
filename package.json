@@ -6,6 +6,8 @@
         "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
+        "@iconify-json/heroicons": "^1.1.5",
+        "@iconify-json/mdi": "^1.1.33",
         "@inertiajs/vue3": "^1.0.0",
         "@quasar/vite-plugin": "^1.4.1",
         "@tailwindcss/forms": "^0.5.3",
@@ -22,10 +24,14 @@
         "prettier": "^3.0.0",
         "sass": "1.32.12",
         "tailwindcss": "^3.2.1",
+        "unplugin-auto-import": "^0.16.6",
+        "unplugin-icons": "^0.16.5",
+        "unplugin-vue-components": "^0.25.1",
         "vite": "^4.0.0",
         "vue": "^3.2.41"
     },
     "dependencies": {
+        "@kyvg/vue3-notification": "^2.9.1",
         "@quasar/extras": "^1.16.5",
         "quasar": "^2.12.3"
     }

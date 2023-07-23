@@ -1,15 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import Toast from '@/Components/Toast.vue'
 
-const count = ref(0)
+function back() {
+    router.get(route('toast'))
+}
 </script>
 
 <template>
     <div>
-        <h1>
-            Login {{ count }} Login {{ count }} Login {{ count }} Login
-            {{ count }} Login {{ count }} Login {{ count }} Login
-            {{ count }} Login {{ count }}
-        </h1>
+        <h1>Login</h1>
+        <q-btn color="primary" @click="back">Teste</q-btn>
     </div>
+    <Toast />
 </template>
