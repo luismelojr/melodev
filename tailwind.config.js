@@ -25,7 +25,7 @@ export default {
                 default: colors.slate,
                 dark: '#313A46',
                 light: '#FAFBFE',
-                primary: '#7C3AED',
+                primary: '#095660',
                 gray: {
                     50: '#F8FAFC',
                     100: '#F1F5F9',
@@ -37,6 +37,10 @@ export default {
                     700: '#334155',
                     800: '#1E293B',
                 },
+            },
+            backgroundImage: {
+                // eslint-disable-next-line quotes
+                banner: "url('/assets/images/bg.jpg')",
             },
         },
     },
