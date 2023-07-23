@@ -13,11 +13,12 @@ import '@quasar/extras/fontawesome-v6/fontawesome-v6.css'
 
 // Import Quasar CSS
 import '../css/quasar.css'
+import 'remixicon/fonts/remixicon.css'
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel'
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: () => `${appName}`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -25,8 +25,11 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('toast', function() {
-    return redirect()->back()->toast('Testando');
-})->name('toast');
+Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
+   Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+   Route::get('/teste', function () {
+       return Inertia::render('Admin/Teste');
+   })->name('teste');
+});
 
 require __DIR__.'/auth.php';

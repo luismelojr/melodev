@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
     <svg viewBox="0 0 322 67" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask
@@ -81,5 +83,3 @@
         />
     </svg>
 </template>
-
-<script setup></script>
