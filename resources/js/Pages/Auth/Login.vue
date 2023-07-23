@@ -1,5 +1,15 @@
-<template>
-    <h1>Login</h1>
-</template>
+<script setup>
+import { ref } from 'vue'
 
-<script setup></script>
+const count = ref(0)
+</script>
+
+<template>
+    <div>
+        <h1>
+            Login {{ count }} Login {{ count }} Login {{ count }} Login
+            {{ count }} Login {{ count }} Login {{ count }} Login
+            {{ count }} Login {{ count }}
+        </h1>
+    </div>
+</template>
