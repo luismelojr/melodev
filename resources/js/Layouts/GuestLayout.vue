@@ -1,9 +1,9 @@
 <template>
     <div
-        class="tw-min-h-screen tw-min-w-full tw-grid tw-grid-cols-2 tw-bg-gray-100"
+        class="tw-min-h-screen tw-min-w-full tw-grid tw-grid-cols-1 tw-bg-gray-100 md:tw-grid-cols-2"
     >
         <div
-            class="tw-py-[2.5rem] tw-px-[7rem] tw-flex tw-justify-between tw-flex-col"
+            class="tw-py-[1.5rem] tw-px-[2rem] tw-flex tw-justify-between tw-flex-col sm:tw-py-[2.5rem] sm:tw-px-[7rem] md:tw-px-[3rem]"
         >
             <div>
                 <Link :href="route('login')">
@@ -23,7 +23,7 @@
             >
         </div>
         <div
-            class="tw-bg-banner tw-bg-cover tw-bg-no-repeat tw-bg-center"
+            class="tw-bg-banner tw-bg-cover tw-bg-no-repeat tw-bg-center tw-hidden md:tw-block"
         ></div>
     </div>
     <Toasts />
