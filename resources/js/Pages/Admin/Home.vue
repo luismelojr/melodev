@@ -5,7 +5,7 @@ import Card from '@/Components/Card.vue'
 
 const menus = [
     {
-        name: 'Users',
+        name: 'User',
         url: '/admin/users',
         active: false,
     },

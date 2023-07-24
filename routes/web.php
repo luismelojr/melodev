@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -27,9 +28,7 @@ Route::get('/', function () {
 
 Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {
    Route::get('/', [HomeController::class, 'index'])->name('dashboard');
-   Route::get('/teste', function () {
-       return Inertia::render('Admin/Teste');
-   })->name('teste');
+   Route::resource('/users', UserController::class);
 });
 
 require __DIR__.'/auth.php';

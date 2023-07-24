@@ -15,6 +15,19 @@ const menus = [
         icon: 'ri-home-5-line',
         routeActive: ['admin.dashboard'],
     },
+    {
+        label: 'Cadastros',
+        icon: 'ri-add-line',
+        routeActive: ['admin.users.*'],
+        children: [
+            {
+                label: 'Usuários',
+                href: route('admin.users.index'),
+                icon: 'ri-user-add-line',
+                routeActive: ['admin.users.*'],
+            },
+        ],
+    },
 ]
 
 function isActive(routeName) {
