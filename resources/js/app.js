@@ -1,5 +1,6 @@
 import './bootstrap'
 import { Quasar } from 'quasar'
+
 import '../css/app.css'
 
 import { createApp, h } from 'vue'
@@ -14,6 +15,9 @@ import '@quasar/extras/fontawesome-v6/fontawesome-v6.css'
 // Import Quasar CSS
 import '../css/quasar.css'
 import 'remixicon/fonts/remixicon.css'
+
+import VueDatePicker from '@vuepic/vue-datepicker'
+import '@vuepic/vue-datepicker/dist/main.css'
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel'
 
@@ -30,6 +34,7 @@ createInertiaApp({
             .use(ZiggyVue, Ziggy)
             .use(Quasar)
             .use(Notifications)
+            .component('VueDatePicker', VueDatePicker)
             .mount(el)
     },
     progress: {

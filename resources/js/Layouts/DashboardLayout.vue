@@ -3,6 +3,7 @@ import { Link, Head } from '@inertiajs/vue3'
 import ApplicationLogo from '@/Components/ApplicationLogo.vue'
 import Navigation from '@/Components/Navigation.vue'
 import BoxUser from '@/Components/BoxUser.vue'
+import Toast from '@/Components/Toast.vue'
 const drawer = ref(false)
 </script>
 
@@ -35,7 +36,7 @@ const drawer = ref(false)
                 show-if-above
                 :width="200"
                 :breakpoint="720"
-                style="background: #313a46"
+                style="background: #1c1c1c"
             >
                 <q-scroll-area
                     style="height: calc(100% - 90px); padding-top: 80px"
@@ -58,6 +59,7 @@ const drawer = ref(false)
                     <slot />
                 </q-page>
             </q-page-container>
+            <Toast />
         </q-layout>
     </div>
 </template>

@@ -17,7 +17,7 @@ const user = computed(() => {
             <q-list>
                 <q-item clickable v-close-popup>
                     <Link
-                        :href="route('admin.dashboard')"
+                        :href="route('admin.profile.index')"
                         class="tw-flex tw-items-center tw-gap-2 tw-w-full tw-text-gray-500 hover:tw-text-gray-800"
                     >
                         <i class="tw-text-[14px] ri-user-settings-line"></i>

@@ -29,7 +29,7 @@ function sort(column) {
             class="tw-inline-block tw-min-w-full tw-py-2 tw-align-middle sm:tw-px-6 lg:tw-px-8"
         >
             <div
-                class="tw-overflow-hidden tw-shadow tw-ring-1 tw-ring-black tw-ring-opacity-5 tableCustom"
+                class="tw-overflow-hidden tw-ring-1 tw-ring-black tw-ring-opacity-5 tableCustom"
             >
                 <q-linear-progress
                     dark
@@ -69,6 +69,7 @@ function sort(column) {
                                                         column.direction ===
                                                         'desc',
                                                 }"
+                                                class="tw-text-gray-400 tw-text-[12px]"
                                             ></i>
                                         </button>
                                     </div>

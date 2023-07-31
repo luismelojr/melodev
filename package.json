@@ -33,6 +33,9 @@
     "dependencies": {
         "@kyvg/vue3-notification": "^2.9.1",
         "@quasar/extras": "^1.16.5",
+        "@vuepic/vue-datepicker": "^5.4.0",
+        "date-fns": "^2.30.0",
+        "moment": "^2.29.4",
         "quasar": "^2.12.3",
         "remixicon": "^3.4.0"
     }

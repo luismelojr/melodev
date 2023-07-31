@@ -11,3 +11,18 @@ input:focus {
 * {
     font-family: 'Nunito', sans-serif;
 }
+
+.dp__input {
+    border: 1px solid rgba(0, 0, 0, 0.24) !important;
+    border-radius: 4px !important;
+    padding: 8px 30px 6px 12px !important;
+}
+
+.dp__input:hover {
+    border: 1px solid #000 !important;
+    border-radius: 4px !important;
+}
+
+.dp__input_icon_pad {
+    padding-left: 35px !important;
+}
