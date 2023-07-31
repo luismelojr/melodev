@@ -1,4 +1,6 @@
 <script setup>
+import { breakpointsQuasar, useBreakpoints } from '@vueuse/core'
+
 const props = defineProps({
     data: {
         type: Object || Array,
@@ -13,6 +15,9 @@ const page = ref(props.data?.current_page)
 watch(page, (value) => {
     emit('page', value)
 })
+
+const breakpoints = useBreakpoints(breakpointsQuasar)
+const isMobile = breakpoints.smaller('sm')
 </script>
 
 <template>
@@ -37,7 +42,7 @@ watch(page, (value) => {
             <q-pagination
                 v-model="page"
                 :max="data.last_page"
-                :max-pages="6"
+                :max-pages="isMobile ? 4 : 6"
                 direction-links
                 boundary-links
                 icon-first="skip_previous"

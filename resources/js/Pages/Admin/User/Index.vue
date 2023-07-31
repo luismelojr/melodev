@@ -193,7 +193,9 @@ function preventDelete(id) {
                 :actions="actionsTitle"
             />
             <div class="tw-mt-8">
-                <div class="tw-mt-2 tw-mb-2 tw-grid tw-grid-cols-6 tw-gap-2">
+                <div
+                    class="tw-mt-2 tw-mb-2 tw-grid tw-grid-cols-1 md:tw-grid-cols-6 tw-gap-2"
+                >
                     <q-input
                         v-model="search"
                         clearable
