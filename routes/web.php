@@ -18,13 +18,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+Route::as('site.')->group(function () {
+    Route::get('/', [\App\Http\Controllers\Site\HomeController::class, 'index'])->name('home');
 });
 
 Route::middleware(['auth'])->prefix('admin')->as('admin.')->group(function () {

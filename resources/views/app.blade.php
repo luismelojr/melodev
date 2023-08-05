@@ -23,7 +23,7 @@
         @vite(['resources/js/app.js', "resources/js/Pages/{$page['component']}.vue"])
         @inertiaHead
     </head>
-    <body class="tw-font-sans tw-antialiased">
+    <body class="tw-font-sans tw-antialiased tw-h-[100vh] tw-w-[100vw]">
         @inertia
     </body>
 </html>

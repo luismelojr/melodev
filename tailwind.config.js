@@ -37,6 +37,7 @@ export default {
                     700: '#334155',
                     800: '#1E293B',
                 },
+                bluedark: '#3B4662',
             },
             backgroundImage: {
                 // eslint-disable-next-line quotes
