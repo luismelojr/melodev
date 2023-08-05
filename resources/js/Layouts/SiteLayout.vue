@@ -1,11 +1,11 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
 import SiteLogo from '@/Components/SiteLogo.vue'
-import { useBreakpoints, breakpointsTailwind } from '@vueuse/core'
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const isMobile = breakpoints.smaller('sm')
+import responsive from '@/Utils/responsive.js'
 
 const drawer = ref(false)
+
+const isMobile = responsive().isMobile()
 </script>
 
 <template>
@@ -17,9 +17,9 @@ const drawer = ref(false)
                         class="tw-w-full tw-flex tw-justify-between md:tw-grid md:tw-grid-cols-3 tw-items-center"
                     >
                         <Link :href="route('site.home')"
-                            ><SiteLogo class="tw-w-[100px]"
+                            ><SiteLogo class="tw-w-[100px] -tw-ml-4"
                         /></Link>
-                        <nav class="tw-hidden md:tw-block">
+                        <nav class="tw-hidden md:tw-block -tw-ml-6">
                             <ul
                                 class="tw-text-black tw-flex tw-gap-10 tw-items-center"
                             >
@@ -143,173 +143,180 @@ const drawer = ref(false)
                 </q-toolbar>
             </q-header>
 
-            <q-footer style="background: #eaedf2">
-                <div
-                    class="md:tw-p-6 tw-p-4 md:tw-grid md:tw-grid-cols-4 md:tw-gap-2 tw-flex tw-flex-col"
-                >
-                    <div class="tw-col-span-1 tw-mt-2">
-                        <SiteLogo class="tw-w-[80px]" />
-                        <p
-                            class="tw-text-sm tw-leading-6 tw-text-gray-400 tw-mt-2"
-                        >
-                            Estilo e sofisticação para cada passo feminino.
-                        </p>
-                    </div>
-                    <div
-                        class="tw-col-span-3 md:tw-ml-10 tw-flex md:tw-items-start md:tw-gap-10 tw-flex-col md:tw-flex-row"
-                    >
-                        <div>
-                            <h4
-                                class="tw-uppercase tw-text-[12px] tw-text-gray-900"
-                            >
-                                Marcas
-                            </h4>
-                            <nav
-                                class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col"
-                            >
-                                <nav
-                                    class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col tw-gap-1"
-                                >
-                                    <li>
-                                        <Link
-                                            :href="route('site.home')"
-                                            class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                            >Modare</Link
-                                        >
-                                    </li>
-                                    <li>
-                                        <Link
-                                            :href="route('site.home')"
-                                            class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                            >Renata Mello</Link
-                                        >
-                                    </li>
-                                    <li>
-                                        <Link
-                                            :href="route('site.home')"
-                                            class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                            >Azille</Link
-                                        >
-                                    </li>
-                                    <li>
-                                        <Link
-                                            :href="route('site.home')"
-                                            class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                            >Moleca</Link
-                                        >
-                                    </li>
-                                </nav>
-                            </nav>
-                        </div>
-                        <div>
-                            <h4
-                                class="tw-uppercase tw-text-[12px] tw-text-gray-900"
-                            >
-                                Produtos
-                            </h4>
-                            <nav
-                                class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col tw-gap-1"
-                            >
-                                <li>
-                                    <Link
-                                        :href="route('site.home')"
-                                        class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                        >Ver todos os produtos</Link
-                                    >
-                                </li>
-                                <li>
-                                    <Link
-                                        :href="route('site.home')"
-                                        class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                        >Tenis</Link
-                                    >
-                                </li>
-                                <li>
-                                    <Link
-                                        :href="route('site.home')"
-                                        class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                        >Mocassim</Link
-                                    >
-                                </li>
-                                <li>
-                                    <Link
-                                        :href="route('site.home')"
-                                        class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
-                                        >Salto alto</Link
-                                    >
-                                </li>
-                            </nav>
-                        </div>
-                        <div>
-                            <h4
-                                class="tw-uppercase tw-text-[12px] tw-text-gray-900"
-                            >
-                                Atendimento
-                            </h4>
-                            <nav
-                                class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col"
-                            >
-                                <li>
-                                    <p class="tw-text-[12px]">
-                                        Horário de atendimento: 09:00 às 19:00 -
-                                        Segunda a Sábado, horário de Brasília
-                                        (Exceto domingo e feriados)
-                                    </p>
-                                </li>
-                                <li class="-tw-mt-2">
-                                    <p class="tw-text-[12px]">
-                                        Endereço: Rua J-30 Qd 05 Lt 11 - Mansões
-                                        Paraíso, Aparecidade de Goiânia - GO,
-                                        74952-250
-                                    </p>
-                                </li>
-                            </nav>
-                        </div>
-                        <div>
-                            <h4
-                                class="tw-uppercase tw-text-[12px] tw-text-gray-900"
-                            >
-                                Contato
-                            </h4>
-                            <nav
-                                class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col"
-                            >
-                                <li>
-                                    <p>
-                                        E-mail:
-                                        <a href="mailto:contato@grifis.com.br"
-                                            >contato@grifis.com.br</a
-                                        >
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        Whatsapp:
-                                        <a href="tel:623623-0000"
-                                            >(62) 3623-0000</a
-                                        >
-                                    </p>
-                                </li>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="tw-border-t tw-border-t-gray-200 tw-flex tw-justify-center tw-items-center tw-pt-4"
-                >
-                    <p class="tw-text-gray-400 tw-text-[12px]">
-                        Todos os direitos reservados © 2023 - Desenvolvido por
-                        <a
-                            href="https://www.linkedin.com/in/luis-henrique-da-silva-melo-junior-416579155"
-                            target="_blank"
-                            >Luis Henrique</a
-                        >
-                    </p>
-                </div>
-            </q-footer>
-
             <q-page-container>
-                <q-page class="q-pa-md"> </q-page>
+                <q-page class="tw-flex tw-flex-col">
+                    <div class="md:tw-px-6 tw-px-4 tw-pb-6">
+                        <slot />
+                    </div>
+                    <footer class="tw-mt-auto" style="background: #eaedf2">
+                        <div
+                            class="md:tw-p-6 tw-p-4 md:tw-grid md:tw-grid-cols-4 md:tw-gap-2 tw-flex tw-flex-col"
+                        >
+                            <div class="tw-col-span-1 tw-mt-2">
+                                <SiteLogo class="tw-w-[80px]" />
+                                <p
+                                    class="tw-text-sm tw-leading-6 tw-text-gray-400 tw-mt-2"
+                                >
+                                    Estilo e sofisticação para cada passo
+                                    feminino.
+                                </p>
+                            </div>
+                            <div
+                                class="tw-col-span-3 md:tw-ml-10 tw-flex md:tw-items-start md:tw-gap-10 tw-flex-col md:tw-flex-row"
+                            >
+                                <div>
+                                    <h4
+                                        class="tw-uppercase tw-text-[12px] tw-text-gray-900"
+                                    >
+                                        Marcas
+                                    </h4>
+                                    <nav
+                                        class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col"
+                                    >
+                                        <nav
+                                            class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col tw-gap-1"
+                                        >
+                                            <li>
+                                                <Link
+                                                    :href="route('site.home')"
+                                                    class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                    >Modare</Link
+                                                >
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    :href="route('site.home')"
+                                                    class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                    >Renata Mello</Link
+                                                >
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    :href="route('site.home')"
+                                                    class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                    >Azille</Link
+                                                >
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    :href="route('site.home')"
+                                                    class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                    >Moleca</Link
+                                                >
+                                            </li>
+                                        </nav>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="tw-uppercase tw-text-[12px] tw-text-gray-900"
+                                    >
+                                        Produtos
+                                    </h4>
+                                    <nav
+                                        class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col tw-gap-1"
+                                    >
+                                        <li>
+                                            <Link
+                                                :href="route('site.home')"
+                                                class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                >Ver todos os produtos</Link
+                                            >
+                                        </li>
+                                        <li>
+                                            <Link
+                                                :href="route('site.home')"
+                                                class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                >Tenis</Link
+                                            >
+                                        </li>
+                                        <li>
+                                            <Link
+                                                :href="route('site.home')"
+                                                class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                >Mocassim</Link
+                                            >
+                                        </li>
+                                        <li>
+                                            <Link
+                                                :href="route('site.home')"
+                                                class="tw-text-[12px] hover:tw-text-gray-900 tw-transition-all"
+                                                >Salto alto</Link
+                                            >
+                                        </li>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="tw-uppercase tw-text-[12px] tw-text-gray-900"
+                                    >
+                                        Atendimento
+                                    </h4>
+                                    <nav
+                                        class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col"
+                                    >
+                                        <li>
+                                            <p class="tw-text-[12px]">
+                                                Horário de atendimento: 09:00 às
+                                                19:00 - Segunda a Sábado,
+                                                horário de Brasília (Exceto
+                                                domingo e feriados)
+                                            </p>
+                                        </li>
+                                        <li class="-tw-mt-2">
+                                            <p class="tw-text-[12px]">
+                                                Endereço: Rua J-30 Qd 05 Lt 11 -
+                                                Mansões Paraíso, Aparecidade de
+                                                Goiânia - GO, 74952-250
+                                            </p>
+                                        </li>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <h4
+                                        class="tw-uppercase tw-text-[12px] tw-text-gray-900"
+                                    >
+                                        Contato
+                                    </h4>
+                                    <nav
+                                        class="tw-text-gray-400 tw-list-none tw-flex tw-flex-col"
+                                    >
+                                        <li>
+                                            <p>
+                                                E-mail:
+                                                <a
+                                                    href="mailto:contato@grifis.com.br"
+                                                    >contato@grifis.com.br</a
+                                                >
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                Whatsapp:
+                                                <a href="tel:623623-0000"
+                                                    >(62) 3623-0000</a
+                                                >
+                                            </p>
+                                        </li>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="tw-border-t tw-border-t-gray-200 tw-flex tw-justify-center tw-items-center tw-pt-4"
+                        >
+                            <p class="tw-text-gray-400 tw-text-[12px]">
+                                Todos os direitos reservados © 2023 -
+                                Desenvolvido por
+                                <a
+                                    href="https://www.linkedin.com/in/luis-henrique-da-silva-melo-junior-416579155"
+                                    target="_blank"
+                                    >Luis Henrique</a
+                                >
+                            </p>
+                        </div>
+                    </footer>
+                </q-page>
             </q-page-container>
 
             <q-drawer v-model="drawer" side="right">
